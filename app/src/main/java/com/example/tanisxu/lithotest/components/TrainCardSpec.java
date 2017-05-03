@@ -1,21 +1,13 @@
 package com.example.tanisxu.lithotest.components;
 
-import android.util.Log;
-
-import com.example.tanisxu.lithotest.R;
 import com.facebook.litho.ClickEvent;
 import com.facebook.litho.Column;
 import com.facebook.litho.ComponentContext;
 import com.facebook.litho.ComponentLayout;
-import com.facebook.litho.StateValue;
 import com.facebook.litho.annotations.LayoutSpec;
-import com.facebook.litho.annotations.OnCreateInitialState;
 import com.facebook.litho.annotations.OnCreateLayout;
-import com.facebook.litho.annotations.OnEvent;
-import com.facebook.litho.annotations.OnUpdateState;
 import com.facebook.litho.annotations.Prop;
 import com.facebook.litho.annotations.PropDefault;
-import com.facebook.litho.annotations.State;
 
 import static com.facebook.yoga.YogaEdge.HORIZONTAL;
 import static com.facebook.yoga.YogaEdge.VERTICAL;
@@ -42,7 +34,6 @@ public class TrainCardSpec {
             ComponentContext c,
             @Prop(optional = true) int height) {
 //            @State boolean isExpanded
-//        Log.d("dsadsad", "eqweê12 3 " + isExpanded);
 
         return Column.create(c)
                 .heightPx(height)
@@ -86,17 +77,17 @@ public class TrainCardSpec {
 //                .clickHandler(TrainCard.onClick(c))
                 .build();
     }
-
-    @OnUpdateState
-    static void updateExpanded(StateValue<Boolean> isExpanded) {
-        isExpanded.set(!isExpanded.get());
-    }
-
-    @OnEvent(ClickEvent.class)
-    static void onClick(
-            ComponentContext c) {
-        TrainCard.updateExpanded(c);
-//        TrainCard.updateExpandedAsync(c);
-    }
+//
+//    @OnUpdateState
+//    static void updateExpanded(StateValue<Boolean> isExpanded) {
+//        isExpanded.set(!isExpanded.get());
+//    }
+//
+//    @OnEvent(ClickEvent.class)
+//    static void onClick(
+//            ComponentContext c) {
+//        TrainCard.updateExpanded(c);
+////        TrainCard.updateExpandedAsync(c);
+//    }
 
 }

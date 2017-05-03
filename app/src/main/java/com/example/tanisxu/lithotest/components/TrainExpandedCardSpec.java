@@ -38,7 +38,7 @@ public class TrainExpandedCardSpec {
     }
 
     private static void addContent(RecyclerBinder recyclerBinder, ComponentContext context, int height) {
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 10; i++) {
             recyclerBinder.insertItemAt(
                     i,
                     ComponentInfo.create()

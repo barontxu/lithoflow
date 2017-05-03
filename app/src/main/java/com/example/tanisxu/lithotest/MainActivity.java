@@ -3,12 +3,9 @@ package com.example.tanisxu.lithotest;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.example.tanisxu.lithotest.components.TrainCard;
 import com.example.tanisxu.lithotest.components.TrainExpandCardFlow;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentInfo;
 import com.facebook.litho.LithoView;
-import com.facebook.litho.widget.RecyclerBinder;
 
 
 
@@ -20,6 +17,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final ComponentContext c = new ComponentContext(this);
+        setContentView(LithoView.create(this, TrainExpandCardFlow.create(c).build()));
+    }
+
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        final ComponentContext c = new ComponentContext(this);
 //        final RecyclerBinder recyclerBinder = new RecyclerBinder(
 //                c,
 //                new LinearLayoutInfo(this, OrientationHelper.VERTICAL, false));
@@ -29,20 +34,20 @@ public class MainActivity extends Activity {
 //                .build();
 
 //        addContent(recyclerBinder, c);
-        setContentView(LithoView.create(this, TrainExpandCardFlow.create(c).build()));
+//        setContentView(LithoView.create(this, TrainExpandCardFlow.create(c).build()));
 //        setContentView(LithoView.create(this, component));
-    }
-
-    private static void addContent(RecyclerBinder recyclerBinder, ComponentContext context) {
-        for (int i = 0; i < 32; i++) {
-            recyclerBinder.insertItemAt(
-                    i,
-                    ComponentInfo.create()
-                            .component(TrainCard.create(context)
-                                            .build())
-                            .build());
-        }
-    }
+//    }
+//
+//    private static void addContent(RecyclerBinder recyclerBinder, ComponentContext context) {
+//        for (int i = 0; i < 32; i++) {
+//            recyclerBinder.insertItemAt(
+//                    i,
+//                    ComponentInfo.create()
+//                            .component(TrainCard.create(context)
+//                                            .build())
+//                            .build());
+//        }
+//    }
 
 //
 //    public void waitFor(int millis) {
