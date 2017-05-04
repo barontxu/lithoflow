@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
         setContentView(LithoView.create(this, TrainExpandCardFlow.create(c).build()));
     }
 
-
+}
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -152,4 +152,4 @@ public class MainActivity extends Activity {
 //
 //        return helper.getDecoratedEnd(targetView) - helper.getEndAfterPadding();
 //    }
-}
+

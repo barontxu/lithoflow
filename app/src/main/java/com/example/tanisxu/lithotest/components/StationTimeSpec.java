@@ -1,6 +1,7 @@
 package com.example.tanisxu.lithotest.components;
 
 import com.example.tanisxu.lithotest.R;
+import com.facebook.litho.ClickEvent;
 import com.facebook.litho.ComponentContext;
 import com.facebook.litho.ComponentLayout;
 import com.facebook.litho.Row;
@@ -16,7 +17,7 @@ import static com.facebook.yoga.YogaJustify.SPACE_BETWEEN;
  * Created by Zizhe Xu <zzhxu@mobvoi.com> on 4/27/17.
  */
 
-@LayoutSpec
+@LayoutSpec(events = { ClickEvent.class })
 public class StationTimeSpec {
 
     @OnCreateLayout
